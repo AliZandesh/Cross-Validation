@@ -1,0 +1,31 @@
+K-fold cross-validation is also used for model selection, where it is compared against other model selection techniques such as the Akaike information criterion (AIC) and Bayesian information criterion (BIC).
+
+Generally speaking, k-fold cross validation technique for training the models is found to be particularly useful when there is a limited amount of data available, as it allows us to make better use of the available data for both training and testing the model.
+
+It is important to learn the concepts of cross-validation concepts in order to perform model tuning with the end goal to choose a model which has a high generalization performance.
+
+The advantage of this approach is that each example is used for training and validation (as part of a test fold) exactly once. 
+This yields a lower-variance estimate of the model performance than the holdout method.
+
+k-fold cross validation technique for training the models is found to be particularly useful when there is a limited amount of data available.
+
+K-fold cross-validation can be used to tune the hyperparameters of a model. 
+Examples of hyperparameters include the learning rate, the regularization parameter, and the number of hidden layers in a neural network. 
+
+K-fold cross-validation can be used to select the best model among a set of candidate models.
+
+The number of folds increases if the data is relatively small. 
+However, larger values of k result in an increase of the runtime of the cross-validation algorithm. 
+This yield model performance estimates with higher variance since the training folds become smaller.
+
+For very small data sets, the leave-one-out cross-validation (LOOCV) technique is used. In this technique, the validation data consists of just one record.
+
+The ShuffleSplit cross-validation technique is a popular method for evaluating machine learning models. 
+
+The idea behind ShuffleSplit is to randomly split the data into a training set and a test set, then train the model on the training set and evaluate it on the test set. 
+
+ShuffleSplit is particularly useful for large datasets.
+
+By randomly splitting the data, ShuffleSplit ensures that every example in the dataset is given a chance to be in the training set, which helps to minimize bias.
+
+In a Data-Driven World, there is never enough data to train a model; moreover, eliminating a portion of it for validation raises the danger of Underfitting and exposes us to crucial patterns and trends in our data collection, which increases bias. 
