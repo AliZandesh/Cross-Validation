@@ -1,6 +1,35 @@
+
+
+The Cross Validation Technique is used to assess the accuracy of our Machine Learning model by training on different subsets of the dataset for a certain number of iterations. 
+The final result will be the average of the result of all the iterations.
+
+Algorithm process from scratch without using sklearn library:
+1- In this method, the dataset is divided into k subsets. 
+2- The model is trained and evaluated k times, each time using a different subset of the dataset as a training set. 
+3- This ensures that every subset of the dataset is used effectively. Suppose the length of your dataset is n.
+4- Now you divide it into n//k = m subsets
+5- these m subsets are taken as test dataset in the first iteration.
+For example: 
+Consider an array of numbers from 1 to 9 in ascending order 
+n will be 9
+we use k fold. Here, k= 3
+n//k=m ---> 9//3=3 each subset test has 3 members 
+Your train and test data should look like this
+dataset = [1,2,3,4,5,6,7,8,9] ----> n=9
+	Train	   Test	
+k=1 [1,2,3,4,5,6] [7,8,9]
+k=2 [1,2,3,7,8,9] [4,5,6]
+k=3 [4,5,6,7,8,9] [1,2,3]
+
+
+
 K-fold cross-validation is also used for model selection, where it is compared against other model selection techniques such as the Akaike information criterion (AIC) and Bayesian information criterion (BIC).
 
 Generally speaking, k-fold cross validation technique for training the models is found to be particularly useful when there is a limited amount of data available, as it allows us to make better use of the available data for both training and testing the model.
+
+The optimized value for the K is 10 and used with the data of good size. (Commonly used)
+If the K value is too large, then this will lead to less variance across the training set and limit the model currency difference across the iterations.Larger values of K eventually increase the running time of the cross-validation process.
+
 
 It is important to learn the concepts of cross-validation concepts in order to perform model tuning with the end goal to choose a model which has a high generalization performance.
 
